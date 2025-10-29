@@ -428,3 +428,95 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* --- Media Queries para Responsividad --- */
+
+/* Tablet y dispositivos más pequeños (Max width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 3rem 1.5rem; /* Reduce el padding del contenedor */
+    }
+
+    /* Navegación */
+    nav ul {
+        display: none; /* Oculta el menú de navegación para simplificar (se puede sustituir por un menú hamburguesa) */
+    }
+    nav {
+        justify-content: center; /* Centra el logo si no hay menú */
+    }
+
+    /* Sección Hero */
+    .hero-content h1 {
+        font-size: 3rem; /* Reduce el tamaño del título principal */
+    }
+    .hero-content p {
+        font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
+    }
+
+    /* Sección Sobre Mí */
+    .sobre-mi-content {
+        flex-direction: column; /* Apila el avatar y la descripción */
+        text-align: center;
+        gap: 2rem;
+    }
+    .avatar {
+        margin-bottom: 1rem;
+    }
+    .avatar img {
+        width: 120px;
+        height: 120px;
+    }
+    .description h3 {
+        text-align: center;
+    }
+
+    /* Línea de Tiempo de Formación */
+    .timeline::after {
+        left: 31px; /* Mueve la línea al lado izquierdo */
+    }
+    .timeline-item {
+        width: 100%; /* Ocupa todo el ancho */
+        padding-left: 60px; /* Deja espacio para la línea y el punto */
+        padding-right: 15px;
+    }
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd) {
+        left: 0; /* Coloca todos los ítems a la izquierda */
+        animation-delay: 0s; /* Ajusta la animación si es necesario */
+    }
+    .timeline-dot {
+        left: 21px !important; /* Coloca el punto a la izquierda, encima de la línea */
+        right: auto;
+    }
+}
+
+/* Móviles pequeños (Max width: 600px) */
+@media (max-width: 600px) {
+    /* Estilos Globales */
+    .section-title {
+        font-size: 2rem; /* Reduce el tamaño del título de sección */
+        margin-bottom: 2rem;
+    }
+    .container {
+        padding: 2rem 1rem; /* Reduce el padding para máximo uso del espacio */
+    }
+
+    /* Sección Hero */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* Grid de Habilidades */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Una columna por habilidad */
+    }
+
+    /* Idiomas */
+    .languages-grid {
+        flex-direction: column; /* Apila los ítems de idioma */
+        gap: 1rem;
+    }
+}

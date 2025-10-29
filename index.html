@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMBRE APELLIDO - Dev Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-rain"></canvas>
+
+    <!-- Glitch Overlay -->
+    <div class="glitch-overlay"></div>
+
+    <!-- Terminal Loader -->
+    <div class="terminal-loader">
+        <div class="terminal-box">
+            <div class="terminal-header">
+                <span class="terminal-title">$ initializing_portfolio.sh</span>
+                <div class="terminal-controls">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="terminal-body">
+                <p><span class="prompt">root@portfolio:~$</span> <span class="typing">npm install talent...</span></p>
+                <p><span class="prompt">root@portfolio:~$</span> <span class="typing" style="animation-delay: 0.5s">loading skills...</span></p>
+                <p><span class="prompt">root@portfolio:~$</span> <span class="typing" style="animation-delay: 1s">compiling experience...</span></p>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p class="success"><span class="typing" style="animation-delay: 1.5s">✓ Portfolio loaded successfully!</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="cyber-nav">
+        <div class="nav-logo">
+            <span class="glitch-text" data-text="< DEV />">< DEV /></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> <span>INICIO</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> <span>PERFIL</span></a></li>
+            <li><a href="#timeline" class="nav-link"><i class="fas fa-graduation-cap"></i> <span>TRAYECTORIA</span></a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> <span>ARSENAL</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-terminal"></i> <span>CONTACTO</span></a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="hero-title glitch-text" data-text="NOMBRE APELLIDO">NOMBRE APELLIDO</h1>
+            </div>
+            <div class="hero-subtitle">
+                <span class="bracket">[</span>
+                <span class="typewriter"></span>
+                <span class="cursor-blink">_</span>
+                <span class="bracket">]</span>
+            </div>
+            <div class="hero-description">
+                <p class="code-line"><span class="keyword">const</span> <span class="variable">developer</span> = {</p>
+                <p class="code-line indent">passion: <span class="string">"∞"</span>,</p>
+                <p class="code-line indent">learning: <span class="string">"continuous"</span>,</p>
+                <p class="code-line indent">status: <span class="string">"seeking_opportunities"</span></p>
+                <p class="code-line">};</p>
+            </div>
+            <div class="hero-actions">
+                <button class="cyber-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    <span class="button-text">INICIAR_CONEXIÓN</span>
+                    <span class="button-glitch">INICIAR_CONEXIÓN</span>
+                </button>
+                <button class="cyber-button secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                    <span class="button-text">EXPLORAR_PERFIL</span>
+                    <span class="button-glitch">EXPLORAR_PERFIL</span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hologram-card">
+                <div class="hologram-content">
+                    <div class="profile-hexagon">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="scan-lines"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                <span class="title-text">PERFIL_DESARROLLADOR</span>
+                <span class="title-line"></span>
+            </h2>
+        </div>
+        <div class="about-container">
+            <div class="about-card terminal-style">
+                <div class="card-header">
+                    <span>objetivo_profesional.txt</span>
+                    <div class="card-controls">
+                        <i class="fas fa-minus"></i>
+                        <i class="fas fa-expand"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="terminal-text">
+                        <span class="prompt">&gt;&gt;</span> Formar parte de una empresa tecnológica donde pueda 
+                        realizar mis prácticas como <span class="highlight">desarrollador junior</span>, adquirir 
+                        experiencia real en proyectos de software y seguir desarrollando mis habilidades en 
+                        programación y tecnologías multiplataforma.
+                    </p>
+                    <p class="terminal-text" style="margin-top: 1rem;">
+                        <span class="prompt">&gt;&gt;</span> Estudiante de 1º de <span class="highlight">Desarrollo de 
+                        Aplicaciones Multiplataforma</span>. Apasionado por la programación, el aprendizaje continuo 
+                        y los desafíos tecnológicos. Busco una empresa donde pueda crecer profesionalmente, aportando 
+                        mis ganas, esfuerzo y curiosidad por las nuevas tecnologías.
+                    </p>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-code"></i></div>
+                    <div class="stat-value" data-target="5">0</div>
+                    <div class="stat-label">Lenguajes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-tools"></i></div>
+                    <div class="stat-value" data-target="8">0</div>
+                    <div class="stat-label">Tecnologías</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="stat-value" data-target="100">0</div>
+                    <div class="stat-label">% Motivación</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-brain"></i></div>
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Aprendizaje</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                <span class="title-text">TRAYECTORIA_ACADÉMICA</span>
+                <span class="title-line"></span>
+            </h2>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-item" data-year="2025-2027">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2025 - 2027</div>
+                        <h3 class="timeline-title">FPGS Desarrollo de Aplicaciones Multiplataforma</h3>
+                        <p class="timeline-location">IES Zaidín - Vergeles</p>
+                        <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2023-2025">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-card">
+                        <div class="timeline-date">2023 - 2025</div>
+                        <h3 class="timeline-title">Bachillerato de Ciencias y Tecnología</h3>
+                        <p class="timeline-location">CES Cristo Rey</p>
+                        <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                <span class="title-text">ARSENAL_TECNOLÓGICO</span>
+                <span class="title-line"></span>
+            </h2>
+        </div>
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <h3 class="category-title">
+                    <i class="fas fa-code"></i>
+                    LENGUAJES_DE_PROGRAMACIÓN
+                </h3>
+                <div class="skill-grid">
+                    <div class="skill-orb" data-skill="Java">
+                        <div class="orb-inner">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">JAVA</div>
+                    </div>
+                    <div class="skill-orb" data-skill="C#">
+                        <div class="orb-inner">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">C#</div>
+                    </div>
+                    <div class="skill-orb" data-skill="SQL">
+                        <div class="orb-inner">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">SQL</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Markup Languages -->
+            <div class="skill-category">
+                <h3 class="category-title">
+                    <i class="fas fa-file-code"></i>
+                    LENGUAJES_DE_MARCAS
+                </h3>
+                <div class="skill-grid">
+                    <div class="skill-orb" data-skill="HTML5">
+                        <div class="orb-inner">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">HTML5</div>
+                    </div>
+                    <div class="skill-orb" data-skill="CSS3">
+                        <div class="orb-inner">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">CSS3</div>
+                    </div>
+                    <div class="skill-orb" data-skill="XML">
+                        <div class="orb-inner">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">XML</div>
+                    </div>
+                    <div class="skill-orb" data-skill="JSON">
+                        <div class="orb-inner">
+                            <i class="fas fa-brackets-curly"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">JSON</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Environments -->
+            <div class="skill-category">
+                <h3 class="category-title">
+                    <i class="fas fa-tools"></i>
+                    HERRAMIENTAS_Y_ENTORNOS
+                </h3>
+                <div class="skill-grid">
+                    <div class="skill-orb" data-skill="VS Code">
+                        <div class="orb-inner">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">VS CODE</div>
+                    </div>
+                    <div class="skill-orb" data-skill="Git">
+                        <div class="orb-inner">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">GIT</div>
+                    </div>
+                    <div class="skill-orb" data-skill="GitHub">
+                        <div class="orb-inner">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">GITHUB</div>
+                    </div>
+                    <div class="skill-orb" data-skill="Eclipse">
+                        <div class="orb-inner">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div class="orb-ring"></div>
+                        <div class="orb-label">ECLIPSE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competencias -->
+            <div class="skill-category">
+                <h3 class="category-title">
+                    <i class="fas fa-star"></i>
+                    COMPETENCIAS_PERSONALES
+                </h3>
+                <div class="competencias-grid">
+                    <div class="competencia-chip">
+                        <i class="fas fa-brain"></i>
+                        <span>Aprendizaje Rápido</span>
+                    </div>
+                    <div class="competencia-chip">
+                        <i class="fas fa-users"></i>
+                        <span>Trabajo en Equipo</span>
+                    </div>
+                    <div class="competencia-chip">
+                        <i class="fas fa-comments"></i>
+                        <span>Comunicación</span>
+                    </div>
+                    <div class="competencia-chip">
+                        <i class="fas fa-rocket"></i>
+                        <span>Proactividad</span>
+                    </div>
+                    <div class="competencia-chip">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Curiosidad Tech</span>
+                    </div>
+                    <div class="competencia-chip">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Responsabilidad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages & Other Data -->
+            <div class="additional-info">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-language"></i></div>
+                    <h4>IDIOMAS</h4>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="item-label">Castellano</span>
+                            <span class="item-value">Nativo</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="item-label">Inglés</span>
+                            <span class="item-value">Intermedio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+                    <h4>DATOS_DE_INTERÉS</h4>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fas fa-car"></i>
+                            <span>Carnet B + Vehículo</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>C# Microsoft Certified</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-universal-access"></i>
+                            <span>Discapacidad <33%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                <span class="title-text">ESTABLECER_CONEXIÓN</span>
+                <span class="title-line"></span>
+            </h2>
+        </div>
+        <div class="contact-container">
+            <div class="terminal-contact">
+                <div class="terminal-header">
+                    <span>contact_me.sh</span>
+                    <div class="terminal-controls">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">$</span> <span class="command">./send_message.sh</span></p>
+                    <p class="terminal-output">Inicializando protocolo de comunicación...</p>
+                    <p class="terminal-output success">✓ Canales disponibles:</p>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:EMAIL.COM" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>EMAIL</h4>
+                    <p>EMAIL.COM</p>
+                    <span class="contact-arrow">→</span>
+                </a>
+                <a href="https://github.com" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h4>GITHUB</h4>
+                    <p>github.com/usuario</p>
+                    <span class="contact-arrow">→</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h4>LINKEDIN</h4>
+                    <p>linkedin.com/in/usuario</p>
+                    <span class="contact-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                <span class="bracket">&lt;</span>
+                Diseñado y desarrollado por <span class="highlight">NOMBRE APELLIDO</span>
+                <span class="bracket">/&gt;</span>
+            </p>
+            <p class="footer-copy">© 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
